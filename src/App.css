@@ -1,0 +1,214 @@
+:root {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+
+  color: #FFFFFF;
+  background-color: #000000;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: block;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  border-bottom: 2px solid #FFF;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #AAA;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.app-header {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #333;
+  padding-bottom: 1rem;
+}
+
+.category-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+button {
+  background: transparent;
+  color: #FFF;
+  border: 1px solid #FFF;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 0; /* Sharp corners for B&W aesthetic */
+}
+
+button:hover {
+  background: #FFF;
+  color: #000;
+}
+
+button.active {
+  background: #FFF;
+  color: #000;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.model-list-section {
+  width: 100%;
+}
+
+.random-button {
+  width: 100%;
+  margin-bottom: 1rem;
+  font-weight: 800;
+  border-width: 2px;
+}
+
+/* Dropdown */
+.all-models-dropdown {
+  position: relative;
+  width: 100%;
+}
+
+.dropdown-toggle-button {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  font-size: 0.9rem;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #000;
+  border: 1px solid #FFF;
+  margin-top: -1px;
+  z-index: 100;
+  max-height: 300px;
+  overflow-y: auto;
+  list-style: none;
+  padding: 0;
+}
+
+.dropdown-menu li {
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #222;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.dropdown-menu li:hover {
+  background: #FFF;
+  color: #000;
+}
+
+.model-detail-section {
+  width: 100%;
+}
+
+.model-card {
+  border: 1px solid #333;
+  padding: 1.5rem;
+  background: #000;
+}
+
+.translate-button {
+  margin-top: 2rem;
+  width: 100%;
+  border-color: #555;
+  color: #AAA;
+}
+
+.translate-button:hover {
+  border-color: #FFF;
+  color: #FFF;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@media (min-width: 768px) {
+  .main-content {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .model-list-section {
+    width: 300px;
+    position: sticky;
+    top: 2rem;
+  }
+
+  .model-detail-section {
+    flex: 1;
+  }
+}
